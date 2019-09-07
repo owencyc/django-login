@@ -10,4 +10,6 @@ urlpatterns = [
     path('addIntro2/', views.addIntro2),
     path('addSkill/', views.addSkill),
     path('addVerse/', views.addVerse),
+    path('delVerse/', views.delVerse),
+    path('delSkill/', views.delSkill),
 ]

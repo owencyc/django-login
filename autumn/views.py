@@ -32,6 +32,18 @@ def addVerse(request):
     return JsonResponse({'status': 1})
 
 
+def delVerse(request):
+    json_result = json.loads(request.body)
+    models.Verse.objects.filter(id=json_result.get('pk')).delete()
+    return JsonResponse({'status': 1})
+
+
+def delSkill(request):
+    json_result = json.loads(request.body)
+    models.Skill.objects.filter(id=json_result.get('pk')).delete()
+    return JsonResponse({'status': 1})
+
+
 def addSkill(request):
     json_result = json.loads(request.body)
     obj = models.Skill()
